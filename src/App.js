@@ -1,57 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import Home from './pages/Home';
+import Map from './pages/Map';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
 
-function App() {
-  return (
-    
-    <div className="App">
-      <Navbar fixed="top" bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Navbar>
-      <header className="App-header">
-        <div style={{padding : '20px'}}></div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button>yes</Button>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {page: "home"};
+  }
+  
+  update(p) {
+    this.setState({
+      page: p
+    });
+  }
+  
+ //<Nav.Link onMouseUp={this.update("home")}>Home</Nav.Link>
+  render() {
+    let page;
+    if(this.state.page === "home"){
+      page = <Home/>;
+    }else if(this.state.page === "map"){
+      page = <Map/>
+    }
+    return (
+      <div className="App">
+        <Navbar fixed="top" bg="light" expand="lg">
+          <Navbar.Brand>MJB Enterprises</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link onClick={() => this.update("home")}>Home</Nav.Link>
+              <Nav.Link onClick={() => this.update("map")}>Estimate</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        {page}
+      </div>
+    );
+  }
 }
 
 export default App;
