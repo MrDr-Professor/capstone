@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
+  position: 'relative',
   width: '100%',
-  height: '100%',
+  height:'100%'
 };
 
 class Dist extends React.Component{
@@ -14,14 +15,16 @@ class Dist extends React.Component{
     return (
       <div className="App">
         <header className="App-header">
-          <div style={{padding : '40px'}}></div>
           <h3>Map Page</h3>
+          <div className="cont">
           <Map
           google={this.props.google}
           zoom={8}
           style={mapStyles}
+          containerStyle={mapStyles}
           initialCenter={{ lat: 47.444, lng: -122.176}}
           />
+          </div>
         </header>
       </div>
     );

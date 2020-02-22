@@ -21,14 +21,19 @@
   height:400px;
 }
 
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
- #map {
-  height: 100%;
+.cont {
+
+  width: 50vmax;
+  height: 30vmax;
 }
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 50%;
   margin: 0;
   padding: 0;
+}
+element.style {
+  width: 50%;
+  height: 50%%;
 }
