@@ -3,7 +3,11 @@
 }
 
 .mjb-logo {
-  height: 20vmax;
+  height: 18vmax;
+}
+
+.welcome {
+  padding-top: 20px;
 }
 
 .App-header {
@@ -18,12 +22,19 @@
 }
 
 .carousel {
-  height:400px;
+  height: 35vmax;
 }
 
 .cont {
-
   width: 50vmax;
+  height: 30vmax;
+}
+
+.caro {
+  height: 35vmax;
+}
+
+.duo {
   height: 30vmax;
 }
 
@@ -35,5 +46,9 @@ html, body {
 }
 element.style {
   width: 50%;
-  height: 50%%;
+  height: 50%;
+}
+
+.section {
+  height: 40vmax;
 }
