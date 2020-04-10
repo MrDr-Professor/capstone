@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../pictures/logo.jpg';
+//import logo from '../pictures/logo.jpg';
 import card from '../pictures/blackcard.jpg';
-import card2 from '../pictures/whitecard.JPG';
+//import card2 from '../pictures/whitecard.JPG';
 import trailer from '../pictures/trailer.JPG';
 import bulldozer from '../pictures/bulldozer.PNG';
 import masontrailer from '../pictures/masontrailer.JPG';
@@ -25,7 +25,7 @@ function Home() {
     <div className="Home">
       <header className="App-header">
         <div style={{padding : '40px'}}></div>
-        <Image className="mjb-logo" src={card} className="mjb-logo" rounded/>
+        <Image className="mjb-logo" src={card} rounded/>
         <h1 className="welcome">Welcome to MJB Enterprises</h1>
         <div className="container" style={{padding : '0px 0px 30px 0px'}}>
           <div className="row justify-content-center">
