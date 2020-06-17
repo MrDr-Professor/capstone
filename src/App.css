@@ -10,6 +10,19 @@
   padding-top: 20px;
 }
 
+.sign-out {
+  color: rgb(255, 103, 103);
+}
+
+.sign-out:hover {
+  color: rgb(255, 0, 0);
+}
+
+.desc {
+  width: 504px;
+  height: 206px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
